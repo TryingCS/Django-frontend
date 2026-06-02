@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="terminal">
+    <div class="terminal-header">
+        <div class="terminal-controls">
+            <a href="/" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="terminal-title">operator@SYNTHEX:~</span>
+    </div>
+    <div class="terminal-body">
+        <div class="terminal-output">
+            {% for line in lines %}
+            <p class="terminal-line" style="animation-delay: {{ forloop.counter0 }}s;">
+                <span class="line-text">{{ line }}</span>
+            </p>
+            {% endfor %}
+        </div>
+        <div class="terminal-input">
+            <span class="prompt">&gt;</span>
+            <span class="input-cursor"></span>
+        </div>
+    </div>
+</div>
+{% endblock %}

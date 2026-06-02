@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="settings {% if saved %}settings-saved{% endif %}">
+    <div class="settings-header">
+        <div class="terminal-controls">
+            <a href="/" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="settings-title">SYSTEM SETTINGS</span>
+    </div>
+
+    <div class="settings-body">
+        {% if saved %}
+        <div class="save-banner">
+            <span class="banner-icon">&#10003;</span>
+            <span class="banner-text">SETTINGS SAVED SUCCESSFULLY</span>
+        </div>
+        {% endif %}
+
+        <form method="post" class="settings-form">
+            {% csrf_token %}
+
+            <div class="settings-section">
+                <h3 class="section-title">APPEARANCE</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Dark Mode</span>
+                        <span class="tl-desc">Use dark theme throughout the system</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="dark_mode" {% if config.dark_mode %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">High Contrast</span>
+                        <span class="tl-desc">Increase contrast for accessibility</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="high_contrast" {% if config.high_contrast %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Reduce Motion</span>
+                        <span class="tl-desc">Disable animations and transitions</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="reduce_motion" {% if config.reduce_motion %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3 class="section-title">SYSTEM</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Notifications</span>
+                        <span class="tl-desc">Show system notifications</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="notifications" {% if config.notifications %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Sound Effects</span>
+                        <span class="tl-desc">Enable UI sound feedback</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="sound_effects" {% if config.sound_effects %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Auto Update</span>
+                        <span class="tl-desc">Keep system up to date automatically</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="auto_update" {% if config.auto_update %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3 class="section-title">NETWORK & DEBUG</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Network Proxy</span>
+                        <span class="tl-desc">Route traffic through proxy</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="network_proxy" {% if config.network_proxy %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Debug Mode</span>
+                        <span class="tl-desc">Show extended system information</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="debug_mode" {% if config.debug_mode %}checked{% endif %}>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-save">
+                    <span class="btn-icon">&#10003;</span>
+                    SAVE CHANGES
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

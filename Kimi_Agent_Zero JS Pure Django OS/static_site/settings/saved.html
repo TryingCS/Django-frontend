@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthex OS</title>
+    <link rel="stylesheet" href="../static/css/synthex.css">
+</head>
+<body class="page-enter">
+
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Boot Overlay -->
+    
+
+    <!-- Main Content -->
+    <main class="app-window">
+        
+<div class="settings settings-saved">
+    <div class="settings-header">
+        <div class="terminal-controls">
+            <a href="../index.html" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="settings-title">SYSTEM SETTINGS</span>
+    </div>
+
+    <div class="settings-body">
+        
+        <div class="save-banner">
+            <span class="banner-icon">&#10003;</span>
+            <span class="banner-text">SETTINGS SAVED SUCCESSFULLY</span>
+        </div>
+        
+
+        <form method="post" class="settings-form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="static-csrf-token-placeholder">
+
+            <div class="settings-section">
+                <h3 class="section-title">APPEARANCE</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Dark Mode</span>
+                        <span class="tl-desc">Use dark theme throughout the system</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="dark_mode" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">High Contrast</span>
+                        <span class="tl-desc">Increase contrast for accessibility</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="high_contrast" >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Reduce Motion</span>
+                        <span class="tl-desc">Disable animations and transitions</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="reduce_motion" >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3 class="section-title">SYSTEM</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Notifications</span>
+                        <span class="tl-desc">Show system notifications</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="notifications" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Sound Effects</span>
+                        <span class="tl-desc">Enable UI sound feedback</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="sound_effects" >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Auto Update</span>
+                        <span class="tl-desc">Keep system up to date automatically</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="auto_update" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3 class="section-title">NETWORK & DEBUG</h3>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Network Proxy</span>
+                        <span class="tl-desc">Route traffic through proxy</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="network_proxy" >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <div class="toggle-label">
+                        <span class="tl-name">Debug Mode</span>
+                        <span class="tl-desc">Show extended system information</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="debug_mode" >
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-save">
+                    <span class="btn-icon">&#10003;</span>
+                    SAVE CHANGES
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Taskbar -->
+    <nav class="taskbar">
+        <a href="../index.html" class="taskbar-start">
+            <span class="start-icon">&#9776;</span>
+            <span class="start-label">SYNTHEX</span>
+        </a>
+        <div class="taskbar-apps">
+            <a href="../terminal/index.html" class="taskbar-app " title="Terminal">
+                <span class="app-icon">&gt;_</span>
+            </a>
+            <a href="../sysmon/index.html" class="taskbar-app " title="System Monitor">
+                <span class="app-icon">&#9670;</span>
+            </a>
+            <a href="../media/index.html" class="taskbar-app " title="Media Player">
+                <span class="app-icon">&#9836;</span>
+            </a>
+            <a href="../settings/index.html" class="taskbar-app " title="Settings">
+                <span class="app-icon">&#9881;</span>
+            </a>
+        </div>
+        <div class="taskbar-clock">
+            <span class="clock-time">11</span>
+            <span class="clock-colon">:</span>
+            <span class="clock-time">13</span>
+        </div>
+    </nav>
+
+</body>
+</html>

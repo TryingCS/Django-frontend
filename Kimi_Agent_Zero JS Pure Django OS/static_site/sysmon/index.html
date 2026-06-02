@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthex OS</title>
+    <link rel="stylesheet" href="../static/css/synthex.css">
+</head>
+<body class="page-enter">
+
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Boot Overlay -->
+    
+
+    <!-- Main Content -->
+    <main class="app-window">
+        
+<div class="sysmon">
+    <div class="sysmon-header">
+        <div class="terminal-controls">
+            <a href="../index.html" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="sysmon-title">SYSTEM MONITOR</span>
+    </div>
+
+    <div class="sysmon-grid">
+        <!-- CPU Card -->
+        <div class="glass-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">CPU LOAD</span>
+            </div>
+            <div class="metric-value pulse-glow">68%</div>
+            <div class="bar-container">
+                <div class="bar-fill cpu-bar" style="--bar-width: 68%;"></div>
+            </div>
+            <div class="metric-detail">8 Cores @ 3.8GHz</div>
+        </div>
+
+        <!-- RAM Card -->
+        <div class="glass-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">MEMORY</span>
+            </div>
+            <div class="metric-value pulse-glow">42%</div>
+            <div class="bar-container">
+                <div class="bar-fill ram-bar" style="--bar-width: 42%;"></div>
+            </div>
+            <div class="metric-detail">6.7 / 16 GB DDR5</div>
+        </div>
+
+        <!-- Disk Card -->
+        <div class="glass-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">STORAGE</span>
+            </div>
+            <div class="metric-value pulse-glow">77%</div>
+            <div class="bar-container">
+                <div class="bar-fill disk-bar" style="--bar-width: 77%;"></div>
+            </div>
+            <div class="metric-detail">385 / 500 GB NVMe</div>
+        </div>
+
+        <!-- Network Card -->
+        <div class="glass-card network-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">NETWORK I/O</span>
+            </div>
+            <div class="network-stats">
+                <div class="net-stat">
+                    <span class="net-label">UP</span>
+                    <span class="net-value">12.5 MB/s</span>
+                </div>
+                <div class="net-stat">
+                    <span class="net-label">DOWN</span>
+                    <span class="net-value">48.3 MB/s</span>
+                </div>
+            </div>
+            <div class="network-graph">
+                <div class="graph-bar" style="--h:20%;--d:0s;"></div>
+                <div class="graph-bar" style="--h:45%;--d:0.1s;"></div>
+                <div class="graph-bar" style="--h:70%;--d:0.2s;"></div>
+                <div class="graph-bar" style="--h:35%;--d:0.3s;"></div>
+                <div class="graph-bar" style="--h:85%;--d:0.4s;"></div>
+                <div class="graph-bar" style="--h:55%;--d:0.5s;"></div>
+                <div class="graph-bar" style="--h:90%;--d:0.6s;"></div>
+                <div class="graph-bar" style="--h:40%;--d:0.7s;"></div>
+                <div class="graph-bar" style="--h:65%;--d:0.8s;"></div>
+                <div class="graph-bar" style="--h:30%;--d:0.9s;"></div>
+                <div class="graph-bar" style="--h:75%;--d:1.0s;"></div>
+                <div class="graph-bar" style="--h:50%;--d:1.1s;"></div>
+            </div>
+        </div>
+
+        <!-- Uptime Card -->
+        <div class="glass-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">UPTIME</span>
+            </div>
+            <div class="metric-value uptime-value">14d 07h 33m</div>
+            <div class="metric-detail">System Stable</div>
+        </div>
+
+        <!-- Processes Card -->
+        <div class="glass-card">
+            <div class="card-header">
+                <span class="card-icon">&#9632;</span>
+                <span class="card-name">PROCESSES</span>
+            </div>
+            <div class="proc-grid">
+                <div class="proc-item">
+                    <span class="proc-label">PROC</span>
+                    <span class="proc-value">284</span>
+                </div>
+                <div class="proc-item">
+                    <span class="proc-label">THRD</span>
+                    <span class="proc-value">1024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Taskbar -->
+    <nav class="taskbar">
+        <a href="../index.html" class="taskbar-start">
+            <span class="start-icon">&#9776;</span>
+            <span class="start-label">SYNTHEX</span>
+        </a>
+        <div class="taskbar-apps">
+            <a href="../terminal/index.html" class="taskbar-app " title="Terminal">
+                <span class="app-icon">&gt;_</span>
+            </a>
+            <a href="../sysmon/index.html" class="taskbar-app " title="System Monitor">
+                <span class="app-icon">&#9670;</span>
+            </a>
+            <a href="../media/index.html" class="taskbar-app " title="Media Player">
+                <span class="app-icon">&#9836;</span>
+            </a>
+            <a href="../settings/index.html" class="taskbar-app " title="Settings">
+                <span class="app-icon">&#9881;</span>
+            </a>
+        </div>
+        <div class="taskbar-clock">
+            <span class="clock-time">11</span>
+            <span class="clock-colon">:</span>
+            <span class="clock-time">13</span>
+        </div>
+    </nav>
+
+</body>
+</html>

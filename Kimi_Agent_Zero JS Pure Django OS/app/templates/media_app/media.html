@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="media">
+    <div class="media-header">
+        <div class="terminal-controls">
+            <a href="/" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="media-title">MEDIA PLAYER</span>
+    </div>
+
+    <div class="media-body">
+        <!-- Vinyl Section -->
+        <div class="media-left">
+            <div class="vinyl-container">
+                <div class="vinyl-record">
+                    <div class="vinyl-label">
+                        <div class="label-inner">
+                            <span class="label-text">SX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tonearm">
+                    <div class="arm-base"></div>
+                    <div class="arm-stick"></div>
+                    <div class="arm-head"></div>
+                </div>
+            </div>
+
+            <!-- Equalizer -->
+            <div class="equalizer">
+                <div class="eq-bar" style="--eq-delay:0s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.1s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.2s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.3s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.4s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.5s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.6s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.7s;"></div>
+            </div>
+        </div>
+
+        <!-- Track Info & Playlist -->
+        <div class="media-right">
+            <div class="track-info">
+                <h2 class="track-title" data-text="{{ track.title }}">{{ track.title }}</h2>
+                <p class="track-artist">{{ track.artist }}</p>
+                <p class="track-album">{{ track.album }}</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-time">
+                    <span>{{ track.current }}</span>
+                    <span>{{ track.duration }}</span>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <h3 class="playlist-header">QUEUE</h3>
+                <ul class="playlist-list">
+                    {% for item in playlist %}
+                    <li class="playlist-item {% if item.active %}active{% endif %}">
+                        <span class="pl-num">0{{ forloop.counter }}</span>
+                        <div class="pl-info">
+                            <span class="pl-title">{{ item.title }}</span>
+                            <span class="pl-artist">{{ item.artist }}</span>
+                        </div>
+                        <span class="pl-duration">{{ item.duration }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

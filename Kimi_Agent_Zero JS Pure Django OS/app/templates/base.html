@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthex OS</title>
+    <link rel="stylesheet" href="{% static 'css/synthex.css' %}">
+</head>
+<body class="page-enter">
+
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Boot Overlay -->
+    {% if show_boot %}
+    <div id="boot-overlay">
+        <div class="boot-content">
+            <div class="boot-logo">
+                <div class="logo-hexagon">
+                    <div class="logo-inner">
+                        <span class="logo-text">SX</span>
+                    </div>
+                </div>
+                <h1 class="boot-title">SYNTHEX OS</h1>
+                <p class="boot-version">v2.0.77 // NEURAL EDITION</p>
+            </div>
+            <div class="boot-bar-container">
+                <div class="boot-bar"></div>
+            </div>
+            <p class="boot-status">INITIALIZING NEURAL INTERFACE...</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main class="app-window">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Taskbar -->
+    <nav class="taskbar">
+        <a href="/" class="taskbar-start">
+            <span class="start-icon">&#9776;</span>
+            <span class="start-label">SYNTHEX</span>
+        </a>
+        <div class="taskbar-apps">
+            <a href="/terminal/" class="taskbar-app {% if request.path == '/terminal/' %}active{% endif %}" title="Terminal">
+                <span class="app-icon">&gt;_</span>
+            </a>
+            <a href="/sysmon/" class="taskbar-app {% if request.path == '/sysmon/' %}active{% endif %}" title="System Monitor">
+                <span class="app-icon">&#9670;</span>
+            </a>
+            <a href="/media/" class="taskbar-app {% if request.path == '/media/' %}active{% endif %}" title="Media Player">
+                <span class="app-icon">&#9836;</span>
+            </a>
+            <a href="/settings/" class="taskbar-app {% if request.path == '/settings/' %}active{% endif %}" title="Settings">
+                <span class="app-icon">&#9881;</span>
+            </a>
+        </div>
+        <div class="taskbar-clock">
+            <span class="clock-time">{% now "H" %}</span>
+            <span class="clock-colon">:</span>
+            <span class="clock-time">{% now "i" %}</span>
+        </div>
+    </nav>
+
+</body>
+</html>

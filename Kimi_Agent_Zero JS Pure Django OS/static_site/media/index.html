@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthex OS</title>
+    <link rel="stylesheet" href="../static/css/synthex.css">
+</head>
+<body class="page-enter">
+
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Boot Overlay -->
+    
+
+    <!-- Main Content -->
+    <main class="app-window">
+        
+<div class="media">
+    <div class="media-header">
+        <div class="terminal-controls">
+            <a href="../index.html" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="media-title">MEDIA PLAYER</span>
+    </div>
+
+    <div class="media-body">
+        <!-- Vinyl Section -->
+        <div class="media-left">
+            <div class="vinyl-container">
+                <div class="vinyl-record">
+                    <div class="vinyl-label">
+                        <div class="label-inner">
+                            <span class="label-text">SX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tonearm">
+                    <div class="arm-base"></div>
+                    <div class="arm-stick"></div>
+                    <div class="arm-head"></div>
+                </div>
+            </div>
+
+            <!-- Equalizer -->
+            <div class="equalizer">
+                <div class="eq-bar" style="--eq-delay:0s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.1s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.2s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.3s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.4s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.5s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.6s;"></div>
+                <div class="eq-bar" style="--eq-delay:0.7s;"></div>
+            </div>
+        </div>
+
+        <!-- Track Info & Playlist -->
+        <div class="media-right">
+            <div class="track-info">
+                <h2 class="track-title" data-text="Neon Horizon">Neon Horizon</h2>
+                <p class="track-artist">CyberVoid Ensemble</p>
+                <p class="track-album">Midnight Synthesis</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-time">
+                    <span>1:15</span>
+                    <span>3:42</span>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <h3 class="playlist-header">QUEUE</h3>
+                <ul class="playlist-list">
+                    
+                    <li class="playlist-item active">
+                        <span class="pl-num">01</span>
+                        <div class="pl-info">
+                            <span class="pl-title">Neon Horizon</span>
+                            <span class="pl-artist">CyberVoid Ensemble</span>
+                        </div>
+                        <span class="pl-duration">3:42</span>
+                    </li>
+                    
+                    <li class="playlist-item ">
+                        <span class="pl-num">02</span>
+                        <div class="pl-info">
+                            <span class="pl-title">Digital Rain</span>
+                            <span class="pl-artist">Glitch Protocol</span>
+                        </div>
+                        <span class="pl-duration">4:15</span>
+                    </li>
+                    
+                    <li class="playlist-item ">
+                        <span class="pl-num">03</span>
+                        <div class="pl-info">
+                            <span class="pl-title">Synthetic Dreams</span>
+                            <span class="pl-artist">Neural Mesh</span>
+                        </div>
+                        <span class="pl-duration">5:01</span>
+                    </li>
+                    
+                    <li class="playlist-item ">
+                        <span class="pl-num">04</span>
+                        <div class="pl-info">
+                            <span class="pl-title">Binary Sunset</span>
+                            <span class="pl-artist">Null Pointer</span>
+                        </div>
+                        <span class="pl-duration">3:28</span>
+                    </li>
+                    
+                    <li class="playlist-item ">
+                        <span class="pl-num">05</span>
+                        <div class="pl-info">
+                            <span class="pl-title">Quantum Echo</span>
+                            <span class="pl-artist">Phase Drift</span>
+                        </div>
+                        <span class="pl-duration">4:44</span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Taskbar -->
+    <nav class="taskbar">
+        <a href="../index.html" class="taskbar-start">
+            <span class="start-icon">&#9776;</span>
+            <span class="start-label">SYNTHEX</span>
+        </a>
+        <div class="taskbar-apps">
+            <a href="../terminal/index.html" class="taskbar-app " title="Terminal">
+                <span class="app-icon">&gt;_</span>
+            </a>
+            <a href="../sysmon/index.html" class="taskbar-app " title="System Monitor">
+                <span class="app-icon">&#9670;</span>
+            </a>
+            <a href="../media/index.html" class="taskbar-app " title="Media Player">
+                <span class="app-icon">&#9836;</span>
+            </a>
+            <a href="../settings/index.html" class="taskbar-app " title="Settings">
+                <span class="app-icon">&#9881;</span>
+            </a>
+        </div>
+        <div class="taskbar-clock">
+            <span class="clock-time">11</span>
+            <span class="clock-colon">:</span>
+            <span class="clock-time">13</span>
+        </div>
+    </nav>
+
+</body>
+</html>

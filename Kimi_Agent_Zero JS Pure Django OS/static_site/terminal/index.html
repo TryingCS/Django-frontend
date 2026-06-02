@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthex OS</title>
+    <link rel="stylesheet" href="../static/css/synthex.css">
+</head>
+<body class="page-enter">
+
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Boot Overlay -->
+    
+
+    <!-- Main Content -->
+    <main class="app-window">
+        
+<div class="terminal">
+    <div class="terminal-header">
+        <div class="terminal-controls">
+            <a href="../index.html" class="ctrl-btn close" title="Close"></a>
+            <span class="ctrl-btn minimize"></span>
+            <span class="ctrl-btn maximize"></span>
+        </div>
+        <span class="terminal-title">operator@SYNTHEX:~</span>
+    </div>
+    <div class="terminal-body">
+        <div class="terminal-output">
+            
+            <p class="terminal-line" style="animation-delay: 0s;">
+                <span class="line-text">&gt; INITIALIZING SYNTHEX KERNEL...</span>
+            </p>
+            
+            <p class="terminal-line" style="animation-delay: 1s;">
+                <span class="line-text">&gt; MOUNTING VIRTUAL DRIVES... [OK]</span>
+            </p>
+            
+            <p class="terminal-line" style="animation-delay: 2s;">
+                <span class="line-text">&gt; LOADING USER PROFILE... DONE</span>
+            </p>
+            
+            <p class="terminal-line" style="animation-delay: 3s;">
+                <span class="line-text">&gt; CONNECTING TO NEURAL INTERFACE...</span>
+            </p>
+            
+            <p class="terminal-line" style="animation-delay: 4s;">
+                <span class="line-text">&gt; UPLINK ESTABLISHED. WELCOME, OPERATOR.</span>
+            </p>
+            
+        </div>
+        <div class="terminal-input">
+            <span class="prompt">&gt;</span>
+            <span class="input-cursor"></span>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Taskbar -->
+    <nav class="taskbar">
+        <a href="../index.html" class="taskbar-start">
+            <span class="start-icon">&#9776;</span>
+            <span class="start-label">SYNTHEX</span>
+        </a>
+        <div class="taskbar-apps">
+            <a href="../terminal/index.html" class="taskbar-app " title="Terminal">
+                <span class="app-icon">&gt;_</span>
+            </a>
+            <a href="../sysmon/index.html" class="taskbar-app " title="System Monitor">
+                <span class="app-icon">&#9670;</span>
+            </a>
+            <a href="../media/index.html" class="taskbar-app " title="Media Player">
+                <span class="app-icon">&#9836;</span>
+            </a>
+            <a href="../settings/index.html" class="taskbar-app " title="Settings">
+                <span class="app-icon">&#9881;</span>
+            </a>
+        </div>
+        <div class="taskbar-clock">
+            <span class="clock-time">11</span>
+            <span class="clock-colon">:</span>
+            <span class="clock-time">13</span>
+        </div>
+    </nav>
+
+</body>
+</html>
